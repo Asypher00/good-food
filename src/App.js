@@ -3,9 +3,21 @@ import "./styles.css";
 import { useState } from "react";
 
 const cuisine = {
-  north_indian: [{ name: "dal makhani" }, { name: "kulcha" }],
-  italian: [{ name: "pizza" }, { name: "pasta" }],
-  chinese: [{ name: "noodles" }, { name: "manchurian" }]
+  north_indian: [
+    { name: "dal makhani", rating: "5/5" },
+    { name: "kulcha", rating: "5/5" },
+    { name: "kadhai paneer", rating: "5/5" }
+  ],
+  italian: [
+    { name: "pizza", rating: "5/5" },
+    { name: "pasta", rating: "4/5" },
+    { name: "bruschetta", rating: "3.5/5" }
+  ],
+  chinese: [
+    { name: "noodles", rating: "4/5" },
+    { name: "manchurian", rating: "5/5" },
+    { name: "fried rice", rating: "3/5" }
+  ]
 };
 
 export default function App() {
@@ -55,6 +67,7 @@ export default function App() {
             >
               {" "}
               <div style={{ fontSize: "larger" }}> {item.name} </div>
+              <div style={{ fontSize: "larger" }}> {item.rating} </div>
             </li>
           ))}
         </ul>
